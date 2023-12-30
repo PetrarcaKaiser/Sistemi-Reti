@@ -18,10 +18,10 @@ app.use(session({
 app.use(express.static(__dirname));
 
 const db = mysql.createConnection({
-  host: 'privatechat.database.windows.net',
-  user: 'python',
-  password: '5aiC1i2c3c4i5o6bello',
-  database: 'privatechat'
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'petrarca'
 });
 
 db.connect((err) => {
