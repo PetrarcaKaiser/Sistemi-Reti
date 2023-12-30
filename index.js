@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2'); 
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const url = require('url');
@@ -18,10 +18,10 @@ app.use(session({
 app.use(express.static(__dirname));
 
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'petrarca'
+  host: 'privatechat.database.windows.net',
+  user: 'python',
+  password: '5aiC1i2c3c4i5o6bello',
+  database: 'privatechat'
 });
 
 db.connect((err) => {
@@ -29,7 +29,7 @@ db.connect((err) => {
     throw err;
   }
   console.log('Connesso al database MySQL');
-  
+
   const createTableQuery = "CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255), nickname VARCHAR(255), password VARCHAR(255))";
   db.query(createTableQuery, (err, result) => {
     if (err) throw err;
@@ -58,7 +58,7 @@ app.post('/register', (req, res) => {
     }
 
     if (result.length > 0) {
-      return ;
+      return;
     }
 
     const insertQuery = "INSERT INTO users (email, nickname, password) VALUES (?, ?, ?)";
@@ -76,7 +76,7 @@ app.post('/login', (req, res) => {
   const { email, password } = req.body;
 
   const selectQuery = "SELECT * FROM users WHERE email = ? AND password = ?";
-  
+
   db.query(selectQuery, [email, password], (err, result) => {
     if (err) {
       return console.error(err.message);
@@ -98,7 +98,7 @@ app.get('/logout', (req, res) => {
     if (err) {
       console.error(err);
     } else {
-        res.sendFile(__dirname + '/index.html');
+      res.sendFile(__dirname + '/index.html');
     }
   });
 });
