@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('/Home/sfondo.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ffffff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+
+#nicknameContainer {
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+  
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --complimentary-color: #ffffff;
+  --contrast-color: #ffffff;
+  --light-color: #ffffff;
+  
+}
+  
+.container {
+    background: #ffffff;
+    min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+}
+  
+nav a {
+      font-size: 40px;
+      color: #fff;
+      text-decoration: none;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+}
+  
+nav {
+      position: fixed;
+      left: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 100vh;
+      background: var(--secondary-color);
+      width: 100px;
+      font-family: 'Press Start 2P', cursive;
+}
+  
+section {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    transition: all ease-in .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+} 
+  
+section h1 {
+    color: #000000;
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
+}
+section button {
+    font-family: 'Press Start 2P', cursive;
+}
+section:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  font-family: 'Press Start 2P', cursive;
+}
+  
+section:target h1 {
+  opacity: 0;
+  animation: 0.5s fadeIn forwards .5s;
+}
+div {
+  color: black;
+}
+#first {
+  color:black;
+  background-image: url('/Home/sfondo.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: #000000;
+  font-size: 50px;
+  font-family: 'Press Start 2P', cursive;
+}
+#second {
+  background-image: url('/Home/sfondoPixel2.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ffffff;
+}
+  
+#third {
+  background-image: url('/Home/sfondoPetrarca.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+#third h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5em;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+#third p {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3em;
+  color: rgb(255, 255, 255);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#third ul, #third h2, #third li, #third p, #third h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3em;
+  color: rgb(255, 255, 255);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+
+#fourth {
+  background: var(--light-color);
+  display: block;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+  
+
+@keyframes fadeIn {
+  100% { opacity:1 }
+}
+
+
+  .button {
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: left;
+    color: rgb(255, 251, 0);
+    width: 300px;
+    height: 300px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+  }
+
+  .button:hover {
+    background-color: white;
+    color: rgb(173, 172, 60);
+  }
+
+#button1 {
+  background-image: url('/Home/icon/paintIcon.png');
+  border-radius: 150px;
+}
+
+#button2 {
+  background-image: url('/Home/icon/snakeIcon.png');
+  border-radius: 150px;
+}
+
+#button3 {
+  background-image: url('/Home/icon/trisIcon.jpeg');
+  border-radius: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+      width: 100%;
+      height: auto;
+      position: static;
+      z-index: 100;
+  }
+
+  nav a {
+      font-size: 20px;
+  }
+
+  section h1 {
+      font-size: 30px;
+  }
+
+  .button {
+      width: 150px;
+      height: 150px;
+      font-size: 30px;
+  }
+}
